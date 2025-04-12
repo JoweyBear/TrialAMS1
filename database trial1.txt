@@ -1,0 +1,16 @@
+Create database trial1;
+
+use trial1;
+
+CREATE TABLE `admin` (
+ `staff_id` varchar(40) NOT NULL,
+  `fname` varchar(100) DEFAULT NULL,
+  `mname` varchar(100) DEFAULT NULL,
+  `lname` varchar(100) DEFAULT NULL,
+  `position` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `hash` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`staff_id`)
+);
+
+insert into admin values ("1", "admin", "admin", "admin","admin", "admin", "$2a$10$LEKth3/tc20ctLF88mA9mO6X2b4.63bbqv5TN0QqeaeO.bNa0a7EK");
