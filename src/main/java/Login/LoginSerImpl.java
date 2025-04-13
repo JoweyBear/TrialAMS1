@@ -2,6 +2,7 @@ package Login;
 
 import Admin.AdminModel;
 import AdminDashboard.Dashboard;
+import Utilities.GlobalVar;
 
 public class LoginSerImpl implements LoginService {
 
@@ -17,6 +18,7 @@ public class LoginSerImpl implements LoginService {
         String user = frame.srnm.getText();
         String pass = frame.psswrd.getText();
         AdminModel admin = dao.adminLogin(user, pass);
+        GlobalVar.loggedInAdmin = admin;
         if (admin != null) {
             Dashboard dashboard = new Dashboard();
             dashboard.setVisible(true);

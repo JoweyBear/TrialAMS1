@@ -7,7 +7,7 @@ import javax.swing.UIManager;
 public class AddPanel extends javax.swing.JPanel {
 
     public AddPanel() {
-        UIManager.put( "TextField.background", Color.white );
+        UIManager.put("TextField.background", Color.white);
         initComponents();
 
         admin_id.putClientProperty("JTextField.placeholderText", "Admin ID");
@@ -55,6 +55,11 @@ public class AddPanel extends javax.swing.JPanel {
 
         clr.setFont(new java.awt.Font("Instruction", 0, 14)); // NOI18N
         clr.setText("clear");
+        clr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clrActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -140,7 +145,16 @@ public class AddPanel extends javax.swing.JPanel {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-    public void buttonListener(ActionListener a){
+
+    private void clrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clrActionPerformed
+        admin_id.setText("");
+        pstn.setText("");
+        adfname.setText("");
+        admname.setText("");
+        adlname.setText("");
+        jLabel3.setText("");
+    }//GEN-LAST:event_clrActionPerformed
+    public void buttonListener(ActionListener a) {
         sv.addActionListener(a);
         scn.addActionListener(a);
     }

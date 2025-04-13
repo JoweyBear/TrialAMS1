@@ -61,7 +61,7 @@ public class Drawerbuilder extends SimpleDrawerBuilder {
                                 AdminPanel adminPanel = new AdminPanel(display);
                                 AddPanel addPanel = new AddPanel();
                                 EditPanel editPanel = new EditPanel();
-                                new AdminController(adminPanel,addPanel,editPanel);
+                                new AdminController(adminPanel, addPanel, editPanel);
                                 CardLayout cl = (CardLayout) (dashboard.jPanel2.getLayout());
                                 dashboard.jPanel2.add(adminPanel, "Appointment Panel");
                                 cl.show(dashboard.jPanel2, "Appointment Panel");
@@ -89,7 +89,11 @@ public class Drawerbuilder extends SimpleDrawerBuilder {
 
     @Override
     public SimpleFooterData getSimpleFooterData() {
-        return new SimpleFooterData();
+        return new SimpleFooterData()
+                .setTitle(GlobalVar.loggedInAdmin.getStFname()
+                        + " " + GlobalVar.loggedInAdmin.getStLname())
+                .setDescription(GlobalVar.loggedInAdmin.getPosition());
+
     }
 
     @Override

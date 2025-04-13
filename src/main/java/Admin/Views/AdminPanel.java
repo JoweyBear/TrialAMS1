@@ -34,7 +34,6 @@ public class AdminPanel extends javax.swing.JPanel {
         dlt = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         srchtxtfld = new javax.swing.JTextField();
-        srch = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(119, 141, 169));
 
@@ -63,9 +62,6 @@ public class AdminPanel extends javax.swing.JPanel {
 
         jPanel2.setLayout(new java.awt.CardLayout());
 
-        srch.setFont(new java.awt.Font("Instruction", 0, 14)); // NOI18N
-        srch.setText("Search");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -77,8 +73,7 @@ public class AdminPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(srchtxtfld, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(srch, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
+                        .addGap(206, 206, 206))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(dd, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
                         .addGap(47, 47, 47)
@@ -97,10 +92,8 @@ public class AdminPanel extends javax.swing.JPanel {
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(srch)
-                            .addComponent(srchtxtfld, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addComponent(srchtxtfld, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 686, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -125,7 +118,7 @@ public class AdminPanel extends javax.swing.JPanel {
         dd.addActionListener(a);
         dt.addActionListener(a);
         dlt.addActionListener(a);
-        srch.addActionListener(a);
+//        srch.addActionListener(a);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -135,8 +128,7 @@ public class AdminPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     public javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    public javax.swing.JButton srch;
+    public javax.swing.JTable jTable1;
     public javax.swing.JTextField srchtxtfld;
     // End of variables declaration//GEN-END:variables
 }
