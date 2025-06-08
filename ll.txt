@@ -1,0 +1,9 @@
+JFileChooser chooser = new JFileChooser();
+chooser.showOpenDialog(null);
+File file = chooser.getSelectedFile();
+String path = file.getAbsolutePath();
+
+Image im = Toolkit.getDefaultToolkit().createImage(path);
+im = im.getScaledInstance(image.getWidth(), image.getHeight(), Image.SCALE_SMOOTH);
+ImageIcon ii = new ImageIcon(im);
+image.setIcon(ii);
