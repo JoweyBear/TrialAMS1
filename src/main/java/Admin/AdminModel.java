@@ -1,5 +1,8 @@
 package Admin;
 
+import java.sql.Blob;
+import java.util.Date;
+
 public class AdminModel {
 
 //    fingerprint
@@ -7,9 +10,15 @@ public class AdminModel {
     private String stFname;
     private String stMname;
     private String stLname;
-    private String position;
+//    private String position;
+    private String conNum;
+    private String email;
+    private Date bday;
+    private Blob image;
+    private String collge;
     private String username;
     private String pass;
+    
 
     public String getStaff_id() {
         return staff_id;
@@ -43,13 +52,13 @@ public class AdminModel {
         this.stLname = stLname;
     }
 
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
+//    public String getPosition() {
+//        return position;
+//    }
+//
+//    public void setPosition(String position) {
+//        this.position = position;
+//    }
 
     public String getUsername() {
         return username;
@@ -65,5 +74,45 @@ public class AdminModel {
 
     public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public String getConNum() {
+        return conNum;
+    }
+
+    public void setConNum(String conNum) {
+        this.conNum = conNum;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Date getBday() {
+        return bday;
+    }
+
+    public void setBday(Date bday) {
+        this.bday = bday;
+    }
+
+    public Blob getImage() {
+        return image;
+    }
+
+    public void setImage(Blob image) {
+        this.image = image;
+    }
+
+    public String getCollge() {
+        return collge;
+    }
+
+    public void setCollge(String collge) {
+        this.collge = collge;
     }
 }

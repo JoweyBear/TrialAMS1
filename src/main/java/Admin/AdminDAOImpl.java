@@ -45,7 +45,7 @@ public class AdminDAOImpl implements AdminDAO {
             stmt.setString(2, admin.getStFname());
             stmt.setString(3, admin.getStMname());
             stmt.setString(4, admin.getStLname());
-            stmt.setString(5, admin.getPosition());
+//            stmt.setString(5, admin.getPosition());
 //            stmt.setString(6, staff.getUsername());
 ////            System.out.println(staff.getPass());
 //            stmt.setString(7, staff.getPass());
@@ -70,7 +70,7 @@ public class AdminDAOImpl implements AdminDAO {
             stmt.setString(1, admin.getStFname());
             stmt.setString(2, admin.getStMname());
             stmt.setString(3, admin.getStLname());
-            stmt.setString(4, admin.getPosition());
+//            stmt.setString(4, admin.getPosition());
             stmt.setString(5, admin.getStaff_id());
 //            stmt.setString(6, staff.getPass());
 //            System.out.println(staff.getUsername());

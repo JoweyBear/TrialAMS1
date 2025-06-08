@@ -1,5 +1,6 @@
 package Admin.Views;
 
+import Utilities.RegisterFont;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import javax.swing.UIManager;
@@ -11,11 +12,24 @@ public class AddPanel extends javax.swing.JPanel {
         initComponents();
 
         admin_id.putClientProperty("JTextField.placeholderText", "Admin ID");
-        pstn.putClientProperty("JTextField.placeholderText", "Position");
+        pstn.putClientProperty("JTextField.placeholderText", "Position/College");
         adfname.putClientProperty("JTextField.placeholderText", "First Name");
         admname.putClientProperty("JTextField.placeholderText", "Middle Name");
         adlname.putClientProperty("JTextField.placeholderText", "Last Name");
-        jLabel3.setText("");
+        nmbr.putClientProperty("JTextField.placeholderText", "Contact Number");
+        ml.putClientProperty("JTextField.placeholderText", "Email");
+        sx.putClientProperty("JComboBox.placeholderText", "Sex");
+        bdy.putClientProperty("JDateChooser.placeholderText", "Birthday");
+        usrnm.putClientProperty("JTextField.placeholderText", "Userame");
+        psswrd.putClientProperty("JTextField.placeholderText", "Password");
+        cnfrm.putClientProperty("JTextField.placeholderText", "Confirm Password");
+
+        jLabelimage.setText("");
+        jLabelfinger.setText("");
+        chssmg.setFont(RegisterFont.getFont("nstr", 14));
+        scn.setFont(RegisterFont.getFont("nstr", 14));
+        sv.setFont(RegisterFont.getFont("nstr", 14));
+        clr.setFont(RegisterFont.getFont("nstr", 14));
 
     }
 
@@ -23,6 +37,7 @@ public class AddPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jPanel1 = new javax.swing.JPanel();
         adlname = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -31,21 +46,40 @@ public class AddPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         admin_id = new javax.swing.JTextField();
         pstn = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jLabelimage = new javax.swing.JLabel();
         sv = new javax.swing.JButton();
         scn = new javax.swing.JButton();
         clr = new javax.swing.JButton();
+        nmbr = new javax.swing.JTextField();
+        jLabelfinger = new javax.swing.JLabel();
+        chssmg = new javax.swing.JButton();
+        sx = new javax.swing.JComboBox<>();
+        bdy = new com.toedter.calendar.JDateChooser();
+        usrnm = new javax.swing.JTextField();
+        psswrd = new javax.swing.JTextField();
+        cnfrm = new javax.swing.JTextField();
+        ml = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(119, 141, 169));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(13, 27, 42), 2, true), "Add Admin", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Bahnschrift", 1, 36))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(13, 27, 42), 2, true), "Add Admin", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new java.awt.Font("SansSerif", 1, 36))); // NOI18N
+
+        adlname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Personal Infromatiom:");
 
+        adfname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        admname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("University Information");
 
-        jLabel3.setText("jLabel3");
+        admin_id.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        pstn.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        jLabelimage.setText("jLabel3");
 
         sv.setFont(new java.awt.Font("Instruction", 0, 14)); // NOI18N
         sv.setText("save");
@@ -61,6 +95,24 @@ public class AddPanel extends javax.swing.JPanel {
             }
         });
 
+        nmbr.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        jLabelfinger.setText("jLabel3");
+
+        chssmg.setFont(new java.awt.Font("Instruction", 0, 14)); // NOI18N
+        chssmg.setText("Choose Image");
+
+        sx.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Female", "Male" }));
+        sx.setSelectedIndex(-1);
+
+        usrnm.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        psswrd.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        cnfrm.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        ml.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -74,20 +126,8 @@ public class AddPanel extends javax.swing.JPanel {
                 .addComponent(admname)
                 .addGap(31, 31, 31))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(adlname)
-                .addGap(31, 31, 31))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(81, 81, 81))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(94, 94, 94)
-                .addComponent(scn, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                .addGap(91, 91, 91))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addComponent(sv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(sv, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
                 .addGap(91, 91, 91))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(94, 94, 94)
@@ -105,29 +145,67 @@ public class AddPanel extends javax.swing.JPanel {
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(admin_id))
                 .addGap(31, 31, 31))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bdy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(sx, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(adlname, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nmbr, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(scn, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                            .addComponent(jLabelfinger, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelimage, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chssmg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(usrnm, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(psswrd, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cnfrm, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ml, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGap(31, 31, 31))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0)
-                .addComponent(admin_id, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addComponent(admin_id)
                 .addGap(10, 10, 10)
-                .addComponent(pstn, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addComponent(pstn)
                 .addGap(30, 30, 30)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0)
-                .addComponent(adfname, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                .addGap(10, 10, 10)
-                .addComponent(admname, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                .addGap(10, 10, 10)
-                .addComponent(adlname, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                .addGap(10, 10, 10)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                .addGap(10, 10, 10)
-                .addComponent(scn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(44, 44, 44)
+                .addComponent(adfname)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(admname)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(adlname)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nmbr)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ml)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sx, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(bdy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(usrnm)
+                .addGap(12, 12, 12)
+                .addComponent(psswrd)
+                .addGap(12, 12, 12)
+                .addComponent(cnfrm)
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelfinger, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelimage, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(scn)
+                    .addComponent(chssmg))
+                .addGap(18, 18, 18)
                 .addComponent(sv, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(4, 4, 4)
                 .addComponent(clr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -152,11 +230,19 @@ public class AddPanel extends javax.swing.JPanel {
         adfname.setText("");
         admname.setText("");
         adlname.setText("");
-        jLabel3.setText("");
+        nmbr.setText("");
+        ml.setText("");
+        sx.setSelectedIndex(-1);
+        usrnm.setText("");
+        psswrd.setText("");
+        cnfrm.setText("");
+        jLabelimage.setText("");
+        jLabelfinger.setText("");
     }//GEN-LAST:event_clrActionPerformed
     public void buttonListener(ActionListener a) {
         sv.addActionListener(a);
         scn.addActionListener(a);
+        chssmg.addActionListener(a);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -164,13 +250,23 @@ public class AddPanel extends javax.swing.JPanel {
     public javax.swing.JTextField adlname;
     public javax.swing.JTextField admin_id;
     public javax.swing.JTextField admname;
+    private com.toedter.calendar.JDateChooser bdy;
+    public javax.swing.JButton chssmg;
     public javax.swing.JButton clr;
+    public javax.swing.JTextField cnfrm;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    public javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel jLabelfinger;
+    public javax.swing.JLabel jLabelimage;
     private javax.swing.JPanel jPanel1;
+    public javax.swing.JTextField ml;
+    public javax.swing.JTextField nmbr;
+    public javax.swing.JTextField psswrd;
     public javax.swing.JTextField pstn;
     public javax.swing.JButton scn;
     public javax.swing.JButton sv;
+    public javax.swing.JComboBox<String> sx;
+    public javax.swing.JTextField usrnm;
     // End of variables declaration//GEN-END:variables
 }

@@ -52,7 +52,7 @@ public class AdminSerImpl implements AdminService {
             admin.setStFname(addPanel.adfname.getText());
             admin.setStMname(addPanel.admname.getText());
             admin.setStLname(addPanel.adlname.getText());
-            admin.setPosition(addPanel.pstn.getText());
+//            admin.setPosition(addPanel.pstn.getText());
             dao.save(admin);
             setTableData();
             addPanel.admin_id.setText("");
@@ -60,7 +60,7 @@ public class AdminSerImpl implements AdminService {
             addPanel.adfname.setText("");
             addPanel.admname.setText("");
             addPanel.adlname.setText("");
-            addPanel.jLabel3.setText("");
+            addPanel.jLabelimage.setText("");
 
         }
     }
@@ -95,7 +95,7 @@ public class AdminSerImpl implements AdminService {
             admin.setStFname(editPanel.adfname.getText());
             admin.setStMname(editPanel.admname.getText());
             admin.setStLname(editPanel.adlname.getText());
-            admin.setPosition(editPanel.pstn.getText());
+//            admin.setPosition(editPanel.pstn.getText());
             dao.update(admin);
             setTableData();
             editPanel.admin_id.setText("");
@@ -103,7 +103,7 @@ public class AdminSerImpl implements AdminService {
             editPanel.adfname.setText("");
             editPanel.admname.setText("");
             editPanel.adlname.setText("");
-            editPanel.jLabel3.setText("");
+//            editPanel.jLabel3.setText("");
 
         }
     }

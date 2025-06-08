@@ -92,7 +92,11 @@ public class Drawerbuilder extends SimpleDrawerBuilder {
         return new SimpleFooterData()
                 .setTitle(GlobalVar.loggedInAdmin.getStFname()
                         + " " + GlobalVar.loggedInAdmin.getStLname())
-                .setDescription(GlobalVar.loggedInAdmin.getPosition());
+                .setDescription(GlobalVar.loggedInAdmin.getCollge());
+//        return new SimpleFooterData()
+//                .setTitle(GlobalVar.loggedInAdmin.getStFname()
+//                        + " " + GlobalVar.loggedInAdmin.getStLname())
+//                .setDescription(GlobalVar.loggedInAdmin.getPosition());
 
     }
 

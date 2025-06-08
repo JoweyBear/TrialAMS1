@@ -1,5 +1,6 @@
 package Admin.Views;
 
+import Utilities.RegisterFont;
 import com.formdev.flatlaf.FlatLaf;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -20,6 +21,10 @@ public class AdminPanel extends javax.swing.JPanel {
         cl.show(jPanel2, "DisplayPanel");
         srchtxtfld.setBackground(new Color(255, 255, 255));
         srchtxtfld.putClientProperty("JTextField.placeholderText", "Search here...");
+        dd.setFont(RegisterFont.getFont("nstr", 14));
+        dt.setFont(RegisterFont.getFont("nstr", 14));
+        dlt.setFont(RegisterFont.getFont("nstr", 14));
+
     }
 
     @SuppressWarnings("unchecked")
@@ -71,16 +76,16 @@ public class AdminPanel extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(srchtxtfld, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
-                        .addGap(206, 206, 206))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(dd, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
                         .addGap(47, 47, 47)
                         .addComponent(dt, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                         .addGap(47, 47, 47)
                         .addComponent(dlt, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(srchtxtfld, javax.swing.GroupLayout.PREFERRED_SIZE, 489, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
